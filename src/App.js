@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import Results from './components/Results/Results';
 import Nominations from './components/Nominations/Nominations';
 import Banner from './components/Banner/Banner';
+import Footer from './Footer/Footer';
 import axios from 'axios';
 import useDebounce from './hooks/useDebounce';
 
@@ -23,7 +24,7 @@ function App() {
 
 	const [results, setResults] = useState([]);
 
-	// Persists users nominations beyond refresh
+	// Persist user nominations beyond refresh
 	const session = JSON.parse(localStorage.getItem('nominations'));
 	const [nominations, setNominations] = useState(session || []);
 
@@ -41,7 +42,7 @@ function App() {
 		setSearchTerm(term);
 	}, [term, onSearch]);
 
-	// Calls OMDB api off search
+	// Call OMDB api off search
 	useEffect(() => {
 		setMode(LOADING);
 		axios({
@@ -99,6 +100,7 @@ function App() {
 					setNominations={setNominations}
 				/>
 			</div>
+			<Footer />
 		</div>
 	);
 }
