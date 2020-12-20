@@ -11,7 +11,7 @@ function SearchBar(props) {
 				autoComplete="off"
 			>
 				<input
-					type="text"
+					type="search"
 					className="search-field"
 					placeholder="Search Title..."
 					value={props.inputValue}
