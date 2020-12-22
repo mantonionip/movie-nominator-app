@@ -1,0 +1,17 @@
+.footer {
+    background-color: $color-primary;
+    border-radius: .25rem;
+    max-width: 200px;
+    margin: 0 auto 1rem;
+    padding: 10px 5px;
+
+    &__text {
+        color: $color-gray;
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    &__link {
+        color: $color-secondary;
+    }
+}

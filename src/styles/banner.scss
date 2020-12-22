@@ -1,0 +1,56 @@
+.popup-content {
+    background-color: $color-secondary;
+    border: 1px solid $color-primary;
+    height: 15rem;
+	border-radius: 0.5rem;
+}
+
+.popup {
+    &__header,
+    &__submit-message {
+        background-color: $color-primary;
+        border-radius: 0.4rem 0.4rem 0 0;
+        color: $color-mustard;
+        margin-bottom: 1rem;
+        padding: 10px 20px 15px;
+    }
+
+    &__title,
+    &__article,
+    &__submit-message {
+        font-size: 1rem;
+        text-align: center;
+    } 
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    &__custom-btn {
+        border: 1px solid $color-tertiary !important;
+        background-color: $color-tertiary !important;
+        color: $color-white !important;
+        font-family: $font-body !important;
+        font-size: .5rem !important;
+        font-weight: bold !important;
+        margin-top: 1rem !important;
+        width: 100px;
+        transition: .4s all !important;
+    }
+
+    &__custom-btn:hover {
+        background-color: $color-secondary !important;
+        border: 1px solid $color-primary !important;
+        color: $color-primary !important;
+    }
+
+    &__custom-btn:first-child {
+        margin-right: 10px;
+    }
+
+    &__custom-btn:last-child {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,42 @@
+html {
+    font-size: 125%;
+}
+
+body {
+    font-size: 1.4rem;
+    min-height: 100vh;
+    border: 1px solid transparent;
+    background-color: $color-secondary;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+
+.wrapper {
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+}

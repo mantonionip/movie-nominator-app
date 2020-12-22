@@ -1,0 +1,121 @@
+.nominations {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    &__container {
+        background-color: $color-white;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        min-height: 180px;
+        padding-right: 15px;
+        padding-left: 15px;
+        text-align: right;
+    }
+
+    &__header {
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    &__title {
+        font-weight: bold;
+    }
+
+    &__count-container {
+        font-size: .8rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__count {
+        color: $color-border;
+        margin-left: .2rem;
+    }
+
+    &__span {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    &__list {
+        padding: 0 25px;
+        margin: 16px 0;
+    }
+}
+
+.nomination {
+    &__container {
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        display: flex; 
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__container:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    &__poster {
+        border: 1px solid rgba(0, 0, 0, .1);
+        border-radius: .15rem;
+        padding: 10px;
+        margin-right: 10px;
+        width: 5rem;
+    }
+
+    &__desc-flex {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    &__description {
+        line-height: .5;
+    }
+
+    &__title {
+        color: $color-primary;
+        font-size: .8rem;
+        font-weight: bold;
+        margin-bottom: .5rem;
+        transition: .2s all;
+    }
+
+    &__year {
+        color: $color-border;
+        font-size: .6rem;
+        font-style: italic;
+    }
+
+    &__remove-btn {
+        align-self: flex-end !important;
+        background-color: $color-mustard !important;
+        border: 1px solid $color-mustard !important;
+        color: $color-white !important;
+        font-family: $font-body !important;
+        font-size: .5rem !important;
+        font-weight: bold !important;
+        margin-top: 1rem !important;
+        width: 100px;
+        transition: .4s all !important;
+    }
+
+    &__remove-btn:hover {
+        background-color: $color-primary !important;
+        border: 1px solid $color-primary !important;
+    }
+}
