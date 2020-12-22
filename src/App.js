@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
-// import './App.scss';
-import SearchBar from './components/SearchBar/SearchBar';
-import Results from './components/Results/Results';
-import Nominations from './components/Nominations/Nominations';
-import Banner from './components/Banner/Banner';
-import Footer from './Footer/Footer';
+import './styles/App.scss';
+import SearchBar from './components/SearchBar';
+import Results from './components/Results';
+import Nominations from './components/Nominations';
+import Footer from './components/Footer';
+import Banner from './components/Banner';
 import axios from 'axios';
 import useDebounce from './hooks/useDebounce';
 
@@ -75,17 +75,18 @@ function App() {
 	};
 
 	return (
-		<div className="App">
+		<div className="app wrapper">
 			<Banner
 				popup={popup}
 				closePopup={closePopup}
 				handleSubmit={handleSubmit}
 			/>
-			<h1 className="main-header">
-				<span className="color-change">The</span> Shoppies
+			<h1 className="app__heading">
+				<span className="app__heading-title">The Shoppies</span>
+				<span className="app__heading-span"> Movie awards for entrepreneurs</span>
 			</h1>
 			<SearchBar inputValue={inputValue} setInputValue={setInputValue} />
-			<div className="main-container">
+			<div className="main__container">
 				<Results
 					results={results}
 					nominations={nominations}
