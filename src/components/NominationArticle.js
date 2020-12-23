@@ -23,12 +23,19 @@ function NominationArticle(props) {
 			/>
 			<div className="nomination__desc-flex">
 				<div className="nomination__description">
-					<span className="nomination__title">{props.movie.Title}</span>
-					<span className="nomination__year"> ({props.movie.Year})</span>
+					<span className="nomination__title">
+						{props.movie.Title}
+					</span>
+					<span className="nomination__year">
+						{' '}
+						({props.movie.Year})
+					</span>
 				</div>
 				<Button
 					className="nomination__remove-btn"
-					onClick={() => removeNomination(props.nominations, props.movie)}
+					onClick={() =>
+						removeNomination(props.nominations, props.movie)
+					}
 				>
 					Remove
 				</Button>
