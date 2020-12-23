@@ -4,10 +4,15 @@ $font-body: 'Lato', sans-serif;
 
 // Colors
 $color-primary: #252525;
-$color-secondary: #F6F6F6;
+$color-secondary: #f6f6f6;
 $color-tertiary: #333333;
 $color-black: #000;
-$color-white: #FFF;
+$color-white: #fff;
 $color-gray: #999;
-$color-mustard: #BF973C;
+$color-mustard: #bf973c;
 $color-border: #a3a3a3;
+
+// Breakpoints
+$medium-breakpoint: 950px;
+$small-breakpoint: 576px;
+$x-small-breakpoint: 420px;

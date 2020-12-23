@@ -1,135 +1,145 @@
 .results {
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding-right: 15px;
-    padding-left: 15px;
+	flex: 0 0 50%;
+	max-width: 50%;
+	padding-right: 15px;
+	padding-left: 15px;
+	@media (max-width: $medium-breakpoint) {
+		max-width: 100%;
+	}
 
-    &__container {
-        background-color: $color-white;
-        border: 1px solid rgba(0, 0, 0, .125);
-        border-radius: .25rem;
-        min-width: 0;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 50px;
-        min-height: 180px;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
+	&__container {
+		background-color: $color-white;
+		border: 1px solid rgba(0, 0, 0, 0.125);
+		border-radius: 0.25rem;
+		min-width: 0;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 50px;
+		min-height: 180px;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
 
-    &__header {
-        font-size: 1rem;
-        font-weight: bold;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+	&__header {
+		font-size: 1rem;
+		font-weight: bold;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		@media (max-width: $x-small-breakpoint) {
+			text-align: center;
+		}
+	}
 
-    &__term {
-        color: $color-mustard
-    }
+	&__term {
+		color: $color-mustard;
+	}
 
-    &__info-text {
-        color: $color-border;
-        font-size: .8rem;
-        margin-left: .2rem;
-    }
+	&__info-text {
+		color: $color-border;
+		font-size: 0.8rem;
+		margin-left: 0.2rem;
+		@media (max-width: $x-small-breakpoint) {
+			text-align: center;
+		}
+	}
 
-    &__span {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        border: 0;
-        border-top: 1px solid rgba(0, 0, 0, .1);
-    }
+	&__span {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		border: 0;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+	}
 
-    &__display {
-        font-size: .8rem;
-        margin-bottom: 1rem;
-        text-align: center;
-    }
+	&__display {
+		font-size: 0.8rem;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
 
-    &__list {
-        padding: 0 25px;
-    }
+	&__list {
+		padding: 0 25px;
+	}
 
-    &__search-placeholder {
-        color: $color-border;
-    }
+	&__search-placeholder {
+		color: $color-border;
+	}
 }
 
 .article {
-    &__container {
-        border-bottom: 1px solid rgba(0, 0, 0, .1);
-        display: flex; 
-        justify-content: space-between;
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
-    }
+	&__container {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+	}
 
-    &__container:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
+	&__container:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
 
-    &__poster {
-        border: 1px solid rgba(0, 0, 0, .1);
-        border-radius: .15rem;
-        padding: 10px;
-        margin-right: 10px;
-        width: 5rem;
-    }
+	&__poster {
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 0.15rem;
+		padding: 10px;
+		margin-right: 10px;
+		width: 5rem;
+	}
 
-    &__desc-flex {
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-    }
+	&__desc-flex {
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+	}
 
-    &__description {
-        text-align: right;
-    }
+	&__description {
+		text-align: right;
+	}
 
-    &__title {
-        margin-bottom: .5rem;
-    }
+	&__title {
+		margin-bottom: 0.5rem;
+	}
 
-    &__link {
-        color: $color-primary;
-        font-weight: bold;
-        transition: .2s all;
-    }
+	&__link {
+		color: $color-primary;
+		font-weight: bold;
+		transition: 0.2s all;
+	}
 
-    &__link:hover {
-        color: $color-mustard;
-    }
+	&__link:hover {
+		color: $color-mustard;
+	}
 
-    &__year {
-        color: $color-border;
-        font-size: .6rem;
-        font-style: italic;
-    }
+	&__year {
+		color: $color-border;
+		font-size: 0.6rem;
+		font-style: italic;
+	}
 
-    &__nominate-btn {
-        align-self: flex-end;
-        background-color: $color-mustard !important;
-        border: 1px solid $color-mustard !important;
-        color: $color-white !important;
-        font-family: $font-body !important;
-        font-size: .5rem !important;
-        font-weight: bold !important;
-        margin-top: 1rem !important;
-        width: 100px;
-        transition: .4s all !important;
-    }
+	&__nominate-btn {
+		align-self: flex-end;
+		background-color: $color-mustard !important;
+		border: 1px solid $color-mustard !important;
+		color: $color-white !important;
+		font-family: $font-body !important;
+		font-size: 0.5rem !important;
+		font-weight: bold !important;
+		margin-top: 1rem !important;
+		width: 100px;
+		transition: 0.4s all !important;
+	}
 
-    &__nominate-btn:hover {
-        background-color: $color-primary !important;
-        border: 1px solid $color-primary !important;
-    }
+	&__nominate-btn:hover,
+	&__nominate-btn:focus {
+		background-color: $color-primary !important;
+		border: 1px solid $color-primary !important;
+	}
 }
 
 .MuiButton-root.Mui-disabled {
-    color: rgba(0, 0, 0, 0.26) !important;
-    background-color: rgba(0, 0, 0, 0.12) !important;
-    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+	color: rgba(0, 0, 0, 0.26) !important;
+	background-color: rgba(0, 0, 0, 0.12) !important;
+	border: 1px solid rgba(0, 0, 0, 0.12) !important;
 }

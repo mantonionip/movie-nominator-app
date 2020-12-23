@@ -1,12 +1,12 @@
 html {
-    font-size: 125%;
+	font-size: 125%;
 }
 
 body {
-    font-size: 1.4rem;
-    min-height: 100vh;
-    border: 1px solid transparent;
-    background-color: $color-secondary;
+	font-size: 1.4rem;
+	min-height: 100vh;
+	border: 1px solid transparent;
+	background-color: $color-secondary;
 }
 
 img {
@@ -18,7 +18,7 @@ a {
 	text-decoration: none;
 }
 
-h1, 
+h1,
 h2,
 h3,
 h4,
@@ -34,9 +34,11 @@ li {
 	list-style: none;
 }
 
-
 .wrapper {
-    width: 80%;
-    max-width: 1440px;
-    margin: 0 auto;
+	width: 80%;
+	max-width: 1440px;
+	margin: 0 auto;
+	@media (max-width: $small-breakpoint) {
+		width: 100%;
+	}
 }
