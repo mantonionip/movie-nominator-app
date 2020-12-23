@@ -83,7 +83,10 @@ function App() {
 			/>
 			<h1 className="app__heading">
 				<span className="app__heading-title">The Shoppies</span>
-				<span className="app__heading-span"> Movie awards for entrepreneurs</span>
+				<span className="app__heading-span">
+					{' '}
+					Movie awards for entrepreneurs
+				</span>
 			</h1>
 			<SearchBar inputValue={inputValue} setInputValue={setInputValue} />
 			<div className="main__container">
