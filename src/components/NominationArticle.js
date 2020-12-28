@@ -1,5 +1,4 @@
 import React from 'react';
-// import './NominationArticle.scss';
 import { Button } from '@material-ui/core';
 
 function NominationArticle(props) {
@@ -15,7 +14,7 @@ function NominationArticle(props) {
 		<li className="nomination__container">
 			<img
 				src={props.movie.Poster}
-				alt="movie-poster"
+				alt={`${props.movie.Title} poster`}
 				className="nomination__poster"
 				onError={(event) =>
 					(event.target.src = 'images/no_image_found.jpg')

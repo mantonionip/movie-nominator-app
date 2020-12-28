@@ -28,7 +28,7 @@ function ResultArticle(props) {
 		<li className="article__container">
 			<img
 				src={props.movie.Poster}
-				alt="movie-poster"
+				alt={`${props.movie.Title} poster`}
 				className="article__poster"
 				onError={(event) =>
 					(event.target.src = 'images/no_image_found.jpg')
