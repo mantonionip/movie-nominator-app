@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import NominationArticle from './NominationArticle';
-// import './Nominations.scss';
 
 function Nominations(props) {
 	useEffect(() => {
@@ -12,9 +11,11 @@ function Nominations(props) {
 
 	const getNominationCount = () => {
 		if (props.nominations === undefined || props.nominations.length === 0) {
-			return 'You need to nominate 5 titles!';
+			return `You need to nominate 5 titles!`;
 		} else if (5 - props.nominations.length > 1) {
-			return `You need to nominate ${5 - props.nominations.length} more titles!`;
+			return `You need to nominate ${
+				5 - props.nominations.length
+			} more titles!`;
 		} else if (5 - props.nominations.length === 1) {
 			return 'You need to nominate 1 more title!';
 		} else {
@@ -34,7 +35,7 @@ function Nominations(props) {
 						<span className="nominations__count">
 							{getNominationCount()}
 						</span>
-					</div>	
+					</div>
 				</div>
 				<span className="nominations__span"></span>
 				<ul className="nominations__list">
