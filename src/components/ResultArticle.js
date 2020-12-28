@@ -37,21 +37,26 @@ function ResultArticle(props) {
 			<div className="article__desc-flex">
 				<div className="article__description">
 					<span className="article__title">
-						<a 
-						href={`https://www.imdb.com/title/${props.movie.imdbID}/`}
-						className="article__link"
+						<a
+							href={`https://www.imdb.com/title/${props.movie.imdbID}/`}
+							className="article__link"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
 							{props.movie.Title}
 						</a>
 					</span>
 					<span className="article__year"> ({props.movie.Year})</span>
+					<span>{props.movie.Actors}</span>
 				</div>
 				<Button
 					className="article__nominate-btn"
 					onClick={saveNomination}
 					disabled={isMovieNominated(props.nominations, props.movie)}
 				>
-					Nominate
+					{isMovieNominated(props.nominations, props.movie)
+						? 'Nominated!'
+						: 'Nominate'}
 				</Button>
 			</div>
 		</li>
