@@ -6,9 +6,14 @@ function Banner(props) {
 	// Display thank you message upon submission
 	const display = props.popup.isSubmitted ? (
 		<>
-			<div className="popup__submit-message">Thank you for your submission!</div>
+			<div className="popup__submit-message">
+				Thank you for your submission!
+			</div>
 			<div className="popup__buttons">
-				<Button className="popup__custom-btn" onClick={props.closePopup}>
+				<Button
+					className="popup__custom-btn"
+					onClick={props.closePopup}
+				>
 					Close
 				</Button>
 			</div>
@@ -24,10 +29,16 @@ function Banner(props) {
 				Click below to edit or submit your list.
 			</article>
 			<div className="popup__buttons">
-				<Button className="popup__custom-btn" onClick={props.closePopup}>
+				<Button
+					className="popup__custom-btn"
+					onClick={props.closePopup}
+				>
 					Edit
 				</Button>
-				<Button className="popup__custom-btn" onClick={props.handleSubmit}>
+				<Button
+					className="popup__custom-btn"
+					onClick={props.handleSubmit}
+				>
 					Submit
 				</Button>
 			</div>
@@ -35,11 +46,7 @@ function Banner(props) {
 	);
 
 	return (
-		<Popup
-			modal
-			open={props.popup.isActive}
-			onClose={props.closePopup}
-		>
+		<Popup modal open={props.popup.isActive} onClose={props.closePopup}>
 			{display}
 		</Popup>
 	);
