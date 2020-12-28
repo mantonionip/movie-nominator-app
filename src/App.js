@@ -52,6 +52,7 @@ function App() {
 				s: searchTerm,
 				type: 'movie',
 				plot: 'full',
+				r: 'json',
 			},
 		}).then((res) => {
 			setResults(res.data.Search);
