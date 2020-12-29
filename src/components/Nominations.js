@@ -11,7 +11,7 @@ function Nominations(props) {
 
 	const getNominationCount = () => {
 		if (props.nominations === undefined || props.nominations.length === 0) {
-			return `You need to nominate 5 titles!`;
+			return 'You need to nominate 5 titles!';
 		} else if (5 - props.nominations.length > 1) {
 			return `You need to nominate ${
 				5 - props.nominations.length
