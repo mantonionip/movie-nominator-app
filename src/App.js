@@ -76,7 +76,7 @@ function App() {
 	};
 
 	return (
-		<div className="app wrapper">
+		<div className="app">
 			<Banner
 				popup={popup}
 				closePopup={closePopup}
@@ -89,21 +89,26 @@ function App() {
 					Movie awards for entrepreneurs
 				</span>
 			</h1>
-			<SearchBar inputValue={inputValue} setInputValue={setInputValue} />
-			<div className="main__container">
-				<Results
-					results={results}
-					nominations={nominations}
-					setNominations={setNominations}
+			<div className="wrapper">
+				<SearchBar
 					inputValue={inputValue}
-					mode={mode}
+					setInputValue={setInputValue}
 				/>
-				<Nominations
-					popup={popup}
-					setPopup={setPopup}
-					nominations={nominations}
-					setNominations={setNominations}
-				/>
+				<div className="main__container">
+					<Results
+						results={results}
+						nominations={nominations}
+						setNominations={setNominations}
+						inputValue={inputValue}
+						mode={mode}
+					/>
+					<Nominations
+						popup={popup}
+						setPopup={setPopup}
+						nominations={nominations}
+						setNominations={setNominations}
+					/>
+				</div>
 			</div>
 			<Footer />
 		</div>
