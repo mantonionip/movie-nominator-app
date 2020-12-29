@@ -1,5 +1,4 @@
 import React from 'react';
-// import './ResultArticle.scss';
 import { Button } from '@material-ui/core';
 
 function ResultArticle(props) {
@@ -55,7 +54,7 @@ function ResultArticle(props) {
 					disabled={isMovieNominated(props.nominations, props.movie)}
 				>
 					{isMovieNominated(props.nominations, props.movie)
-						? 'Nominated!'
+						? 'Nominated'
 						: 'Nominate'}
 				</Button>
 			</div>

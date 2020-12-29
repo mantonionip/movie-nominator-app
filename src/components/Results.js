@@ -40,10 +40,13 @@ function Results(props) {
 					)}
 				</h2>
 				<p className="results__info-text">
-					<span class role="img" aria-label="clapper-board">
+					<span role="img" aria-label="clapper-board">
 						🎬
 					</span>
-					Click on the <strong>title</strong> for more info on IMDB!
+					Click on the{' '}
+					<strong className="results__bold-text">title</strong> for
+					more info on{' '}
+					<strong className="results__bold-text">IMDB</strong>!
 				</p>
 				<span className="results__span"></span>
 				<div className="results__display">
