@@ -23,7 +23,14 @@ function NominationArticle(props) {
 			<div className="nomination__desc-flex">
 				<div className="nomination__description">
 					<span className="nomination__title">
-						{props.movie.Title}
+						<a
+							href={`https://www.imdb.com/title/${props.movie.imdbID}/`}
+							className="nomination__link"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							{props.movie.Title}
+						</a>
 					</span>
 					<span className="nomination__year">
 						{' '}
