@@ -104,6 +104,16 @@
 		transition: 0.2s all;
 	}
 
+	&__link {
+		color: $color-primary;
+		font-weight: bold;
+		transition: 0.2s all;
+	}
+
+	&__link:hover {
+		color: $color-mustard;
+	}
+
 	&__year {
 		color: $color-border;
 		font-size: 0.6rem;
