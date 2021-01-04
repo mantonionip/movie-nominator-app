@@ -1,6 +1,7 @@
 import React from 'react';
 import ResultArticle from './ResultArticle';
 import { CircularProgress } from '@material-ui/core';
+import FilmReel from '../assets/film-reel-bw.svg';
 
 function Results(props) {
 	const resultsList = (
@@ -39,15 +40,20 @@ function Results(props) {
 						</span>
 					)}
 				</h2>
-				<p className="results__info-text">
-					<span role="img" aria-label="clapper-board">
-						🎬
-					</span>
-					Click on the{' '}
-					<strong className="results__bold-text">title</strong> for
-					more info on{' '}
-					<strong className="results__bold-text">IMDB</strong>!
-				</p>
+				<div className="results__title-container">
+					<img
+						id="filmReel"
+						className="results__film-reel"
+						src={FilmReel}
+						alt="Illustrated film reel icon."
+					/>
+					<p className="results__info-text">
+						Click on the{' '}
+						<strong className="results__bold-text">title</strong>{' '}
+						for more info on{' '}
+						<strong className="results__bold-text">IMDB</strong>!
+					</p>
+				</div>
 				<span className="results__span"></span>
 				<div className="results__display">
 					{props.mode === 'EMPTY' && (
