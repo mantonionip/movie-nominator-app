@@ -3,7 +3,7 @@
 	max-width: 50%;
 	padding-right: 15px;
 	padding-left: 15px;
-	@media (max-width: $medium-breakpoint) {
+	@media (max-width: $large-breakpoint) {
 		max-width: 100%;
 	}
 
@@ -25,26 +25,29 @@
 		font-weight: bold;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
-		@media (max-width: $x-small-breakpoint) {
-			text-align: center;
-		}
 	}
 
 	&__term {
-		color: $color-mustard;
+		color: $color-purple;
+	}
+
+	&__title-container {
+		display: flex;
+		align-items: center;
 	}
 
 	&__info-text {
-		color: $color-border;
+		color: $color-primary;
 		font-size: 0.8rem;
 		margin-left: 0.2rem;
-		@media (max-width: $x-small-breakpoint) {
-			text-align: center;
-		}
+	}
+
+	&__film-reel {
+		width: 25px;
 	}
 
 	&__bold-text {
-		color: $color-mustard;
+		font-weight: bold;
 	}
 
 	&__span {
@@ -65,7 +68,7 @@
 	}
 
 	&__search-placeholder {
-		color: $color-border;
+		color: $color-gray;
 	}
 }
 
@@ -113,7 +116,7 @@
 	}
 
 	&__link:hover {
-		color: $color-mustard;
+		color: $color-purple;
 	}
 
 	&__year {
@@ -124,8 +127,8 @@
 
 	&__nominate-btn {
 		align-self: flex-end;
-		background-color: $color-mustard !important;
-		border: 1px solid $color-mustard !important;
+		background-color: $color-purple !important;
+		border: 1px solid $color-purple !important;
 		color: $color-white !important;
 		font-family: $font-body !important;
 		font-size: 0.5rem !important;
