@@ -1,23 +1,61 @@
 .app {
-	&__heading {
-		color: $color-primary;
-		font-family: $font-base;
-		font-size: 4rem;
-		text-align: center;
+	&__hero {
 		display: flex;
-		flex-direction: column;
-		@media (max-width: $small-breakpoint) {
-			font-size: 2.4rem;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+
+	&__film-reel {
+		transform: rotate(360deg);
+		animation: rotate infinite 15s both linear;
+
+		@media (max-width: $x-large-breakpoint) {
+			width: 120px;
+		}
+		@media (max-width: $medium-breakpoint) {
+			display: none;
 		}
 	}
 
-	&__heading-span {
-		color: $color-mustard;
-		font-size: 0.8rem;
-		font-weight: 700;
-		text-transform: uppercase;
+	&__heading {
+		color: $color-white;
+		font-family: $font-base;
+		font-size: 6rem;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		margin-right: 1.5rem;
+		margin-left: 1.5rem;
+		@media (max-width: $x-large-breakpoint) {
+			font-size: 4rem;
+		}
+		@media (max-width: $large-breakpoint) {
+			font-size: 3.4rem;
+		}
 		@media (max-width: $small-breakpoint) {
-			font-size: 0.6rem;
+			font-size: 2.4rem;
+		}
+		@media (max-width: $x-small-breakpoint) {
+			font-size: 2rem;
+		}
+	}
+
+	&__heading-title {
+		animation: neon 0.08s ease-in-out infinite alternate;
+		margin-bottom: 1rem;
+	}
+
+	&__heading-span {
+		color: $color-yellow;
+		font-size: 1.2rem;
+		font-weight: 700;
+		letter-spacing: 2.1px;
+		text-transform: uppercase;
+		@media (max-width: $large-breakpoint) {
+			font-size: 1rem;
+		}
+		@media (max-width: $small-breakpoint) {
+			font-size: 0.5rem;
 		}
 	}
 }
@@ -29,7 +67,7 @@
 		margin-top: 1rem;
 		margin-left: -15px;
 		margin-right: -15px;
-		@media (max-width: $medium-breakpoint) {
+		@media (max-width: $large-breakpoint) {
 			flex-direction: column;
 		}
 	}
