@@ -1,18 +1,20 @@
 // Fonts
-$font-base: 'Amiri', serif;
 $font-body: 'Lato', sans-serif;
+$font-base: 'beon', serif;
+$font-subHeading: 'roadMovie', serif;
 
 // Colors
 $color-primary: #252525;
-$color-secondary: #f6f6f6;
-$color-tertiary: #333333;
-$color-black: #000;
+$color-secondary: #020814;
 $color-white: #fff;
 $color-gray: #999;
-$color-mustard: #bf973c;
+$color-yellow: #fac52c;
+$color-purple: #5a1bed;
 $color-border: #a3a3a3;
 
 // Breakpoints
-$medium-breakpoint: 950px;
+$x-large-breakpoint: 1210px;
+$large-breakpoint: 950px;
+$medium-breakpoint: 768px;
 $small-breakpoint: 576px;
 $x-small-breakpoint: 420px;
