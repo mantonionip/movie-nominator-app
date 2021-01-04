@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Banner from './components/Banner';
 import axios from 'axios';
 import useDebounce from './hooks/useDebounce';
+import FilmReel from './assets/film-reel.svg';
 
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
@@ -82,13 +83,27 @@ function App() {
 				closePopup={closePopup}
 				handleSubmit={handleSubmit}
 			/>
-			<h1 className="app__heading">
-				<span className="app__heading-title">The Shoppies</span>
-				<span className="app__heading-span">
-					{' '}
-					Movie awards for entrepreneurs
-				</span>
-			</h1>
+			<div className="app__hero">
+				<img
+					id="filmReel"
+					className="app__film-reel"
+					src={FilmReel}
+					alt="Animated film reel."
+				/>
+				<h1 className="app__heading">
+					<span className="app__heading-title">The Shoppies</span>
+					<span className="app__heading-span">
+						{' '}
+						Movie awards for entrepreneurs
+					</span>
+				</h1>
+				<img
+					id="filmReel"
+					className="app__film-reel"
+					src={FilmReel}
+					alt="Animated film reel."
+				/>
+			</div>
 			<div className="wrapper">
 				<SearchBar
 					inputValue={inputValue}
