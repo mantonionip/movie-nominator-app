@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import NominationArticle from './NominationArticle';
+import Vote from '../assets/vote.svg';
 
 function Nominations(props) {
 	useEffect(() => {
@@ -29,9 +30,12 @@ function Nominations(props) {
 				<div className="nominations__header">
 					<span className="nominations__title">Nomination List </span>
 					<div className="nominations__count-container">
-						<span role="img" aria-label="trophy">
-							🏆
-						</span>
+						<img
+							id="filmReel"
+							className="results__film-reel"
+							src={Vote}
+							alt="Illustrated nomination icon."
+						/>
 						<span className="nominations__count">
 							{getNominationCount()}
 						</span>
