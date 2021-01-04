@@ -3,7 +3,7 @@
 	max-width: 50%;
 	padding-right: 15px;
 	padding-left: 15px;
-	@media (max-width: $medium-breakpoint) {
+	@media (max-width: $large-breakpoint) {
 		max-width: 100%;
 	}
 
@@ -27,9 +27,6 @@
 		display: flex;
 		flex-direction: column;
 		text-align: left;
-		@media (max-width: $x-small-breakpoint) {
-			text-align: center;
-		}
 	}
 
 	&__title {
@@ -41,13 +38,10 @@
 		margin-top: 1rem;
 		display: flex;
 		align-items: center;
-		@media (max-width: $x-small-breakpoint) {
-			margin: 1rem auto 0;
-		}
 	}
 
 	&__count {
-		color: $color-border;
+		color: $color-primary;
 		margin-left: 0.2rem;
 	}
 
@@ -111,7 +105,7 @@
 	}
 
 	&__link:hover {
-		color: $color-mustard;
+		color: $color-purple;
 	}
 
 	&__year {
@@ -122,8 +116,8 @@
 
 	&__remove-btn {
 		align-self: flex-end !important;
-		background-color: $color-mustard !important;
-		border: 1px solid $color-mustard !important;
+		background-color: $color-purple !important;
+		border: 1px solid $color-purple !important;
 		color: $color-white !important;
 		font-family: $font-body !important;
 		font-size: 0.5rem !important;
