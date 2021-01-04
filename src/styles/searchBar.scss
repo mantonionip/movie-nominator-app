@@ -43,4 +43,8 @@
 		height: 2rem;
 		outline: none;
 	}
+
+	&__input::placeholder {
+		color: $color-border;
+	}
 }
