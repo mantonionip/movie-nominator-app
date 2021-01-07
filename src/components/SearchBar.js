@@ -9,7 +9,7 @@ function SearchBar(props) {
 				<p className="search-bar__title">Search Title</p>
 				<form
 					className="search-bar__form"
-					onSubmit={(event) => event.preventDefault()}
+					onSubmit={(e) => e.preventDefault()}
 					autoComplete="off"
 				>
 					<input
