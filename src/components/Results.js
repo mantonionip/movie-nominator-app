@@ -35,7 +35,7 @@ function Results(props) {
 							for
 							<span className="results__term">
 								{' '}
-								{props.inputValue}
+								"{props.inputValue}"
 							</span>
 						</span>
 					)}
