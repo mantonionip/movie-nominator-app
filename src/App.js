@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './styles/App.scss';
+import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import Results from './components/Results';
 import Nominations from './components/Nominations';
@@ -7,7 +8,6 @@ import Footer from './components/Footer';
 import Banner from './components/Banner';
 import axios from 'axios';
 import useDebounce from './hooks/useDebounce';
-import FilmReel from './assets/film-reel.svg';
 
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
@@ -78,33 +78,8 @@ function App() {
 
 	return (
 		<div className="app">
-			<Banner
-				popup={popup}
-				closePopup={closePopup}
-				handleSubmit={handleSubmit}
-			/>
-			<div className="app__hero">
-				<img
-					id="filmReel"
-					className="app__film-reel"
-					src={FilmReel}
-					alt="Animated film reel."
-				/>
-				<h1 className="app__heading">
-					<span className="app__heading-title">The Shoppies</span>
-					<span className="app__heading-span">
-						{' '}
-						Movie awards for entrepreneurs
-					</span>
-				</h1>
-				<img
-					id="filmReel"
-					className="app__film-reel"
-					src={FilmReel}
-					alt="Animated film reel."
-				/>
-			</div>
-			<div className="wrapper">
+			<Header />
+			<main className="main wrapper">
 				<SearchBar
 					inputValue={inputValue}
 					setInputValue={setInputValue}
@@ -124,8 +99,13 @@ function App() {
 						setNominations={setNominations}
 					/>
 				</div>
-			</div>
+			</main>
 			<Footer />
+			<Banner
+				popup={popup}
+				closePopup={closePopup}
+				handleSubmit={handleSubmit}
+			/>
 		</div>
 	);
 }
