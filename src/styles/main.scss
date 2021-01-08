@@ -8,6 +8,7 @@
 		margin-right: -15px;
 		@media (max-width: $large-breakpoint) {
 			flex-direction: column;
+			margin-top: 2rem;
 		}
 	}
 }
