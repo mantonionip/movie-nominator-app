@@ -46,7 +46,6 @@ function ResultArticle(props) {
 						</a>
 					</span>
 					<span className="article__year"> ({props.movie.Year})</span>
-					<span>{props.movie.Actors}</span>
 				</div>
 				<Button
 					className="article__nominate-btn"
