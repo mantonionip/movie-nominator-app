@@ -1,24 +1,28 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import NominationArticle from './NominationArticle';
 import Vote from '../assets/vote.svg';
 
 function Nominations(props) {
-	useEffect(() => {
-		// Toggle popup if 5 movies are nominated
-		if (props.nominations === undefined || props.nominations.length === 5) {
-			props.setPopup({ ...props.popup, isActive: true });
-		}
-	}, [props.nominations]);
-
 	const getNominationCount = () => {
 		if (props.nominations === undefined || props.nominations.length === 0) {
-			return 'You need to nominate 5 titles!';
+			return (
+				<div>
+					You need to nominate <strong>5</strong> titles!
+				</div>
+			);
 		} else if (5 - props.nominations.length > 1) {
-			return `You need to nominate ${
-				5 - props.nominations.length
-			} more titles!`;
+			return (
+				<>
+					You need to nominate{' '}
+					<strong>{5 - props.nominations.length}</strong> more titles!
+				</>
+			);
 		} else if (5 - props.nominations.length === 1) {
-			return 'You need to nominate 1 more title!';
+			return (
+				<div>
+					You need to nominate <strong>1</strong> more title!
+				</div>
+			);
 		} else {
 			return 'Your nomination list is complete!';
 		}
@@ -31,7 +35,7 @@ function Nominations(props) {
 					<span className="nominations__title">Nomination List </span>
 					<div className="nominations__count-container">
 						<img
-							id="filmReel"
+							id="voteBox"
 							className="results__film-reel"
 							src={Vote}
 							alt="Illustrated nomination icon."
@@ -59,6 +63,14 @@ function Nominations(props) {
 						})
 					)}
 				</ul>
+				{props.showSubmit && (
+					<button
+						className="nominations__custom-btn"
+						onClick={props.handleSubmit}
+					>
+						Submit
+					</button>
+				)}
 			</div>
 		</div>
 	);
