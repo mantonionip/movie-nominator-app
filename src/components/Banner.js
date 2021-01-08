@@ -7,8 +7,9 @@ function Banner(props) {
 	const display = props.popup.isSubmitted ? (
 		<>
 			<div className="popup__submit-message">
-				Thank you for your submission!
+				<p>Completed!</p>
 			</div>
+			<p className="popup__article">Thank you for your submission!</p>
 			<div className="popup__buttons">
 				<Button
 					className="popup__custom-btn"
@@ -19,15 +20,20 @@ function Banner(props) {
 			</div>
 		</>
 	) : (
-		<div>
+		<div className="popup">
 			<div className="popup__header">
 				<span className="popup__title">
 					Thank you for nominating your top 5 movies!
 				</span>
 			</div>
 			<article className="popup__article">
-				Click below to edit or submit your list.
+				<p>Here's the titles you picked:</p>
 			</article>
+			<div className="popup__nominated-list">
+				{props.nominations.map(({ Title }) => (
+					<p className="popup__nominated-title">✅ {Title}</p>
+				))}
+			</div>
 			<div className="popup__buttons">
 				<Button
 					className="popup__custom-btn"
