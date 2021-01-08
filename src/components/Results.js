@@ -2,6 +2,7 @@ import React from 'react';
 import ResultArticle from './ResultArticle';
 import { CircularProgress } from '@material-ui/core';
 import FilmReel from '../assets/film-reel-bw.svg';
+import TornReel from '../assets/torn-reel.svg';
 
 function Results(props) {
 	const resultsList = (
@@ -57,9 +58,25 @@ function Results(props) {
 				<span className="results__span"></span>
 				<div className="results__display">
 					{props.mode === 'EMPTY' && (
-						<span className="results__search-placeholder">
+						<p className="results__search-placeholder">
 							Search a movie to nominate
-						</span>
+						</p>
+					)}
+					{props.mode === 'ERROR' && (
+						<div className="results__search-placeholder">
+							<img
+								id="tornFilmReel"
+								className="results__torn-reel"
+								src={TornReel}
+								alt="Illustrated film reel icon."
+							/>
+							<p>
+								Ooops..., there's no match with your search!
+								<span className="results__search-span">
+									Please refine your search query!
+								</span>
+							</p>
+						</div>
 					)}
 					{props.mode === 'SHOW' && resultsList}
 					{props.mode === 'LOADING' && (
