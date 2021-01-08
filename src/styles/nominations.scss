@@ -41,7 +41,7 @@
 	}
 
 	&__count {
-		color: $color-primary;
+		color: $color-secondary;
 		margin-left: 0.2rem;
 	}
 
@@ -55,6 +55,26 @@
 	&__list {
 		padding: 0 25px;
 		margin: 16px 0;
+	}
+
+	&__custom-btn {
+		border: 1px solid $color-purple !important;
+		border-radius: 5px;
+		background-color: $color-purple !important;
+		color: $color-white !important;
+		cursor: pointer;
+		font-family: $font-body !important;
+		font-size: 0.8rem !important;
+		font-weight: bold !important;
+		margin: 1rem auto !important;
+		padding: 12px 0;
+		width: 150px;
+		transition: 0.4s all !important;
+	}
+
+	&__custom-btn:hover {
+		background-color: $color-secondary !important;
+		border: 1px solid $color-secondary !important;
 	}
 }
 
@@ -91,7 +111,7 @@
 	}
 
 	&__title {
-		color: $color-primary;
+		color: $color-secondary;
 		font-size: 0.8rem;
 		font-weight: bold;
 		margin-bottom: 0.5rem;
@@ -99,7 +119,7 @@
 	}
 
 	&__link {
-		color: $color-primary;
+		color: $color-secondary;
 		font-weight: bold;
 		transition: 0.2s all;
 	}
@@ -129,7 +149,7 @@
 
 	&__remove-btn:hover,
 	&__remove-btn:focus {
-		background-color: $color-primary !important;
-		border: 1px solid $color-primary !important;
+		background-color: $color-secondary !important;
+		border: 1px solid $color-secondary !important;
 	}
 }
