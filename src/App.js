@@ -6,15 +6,16 @@ import Results from './components/Results';
 import Nominations from './components/Nominations';
 import Footer from './components/Footer';
 import Banner from './components/Banner';
-import axios from 'axios';
+import Request from './helpers/Request';
 import useDebounce from './hooks/useDebounce';
 
-const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
+let session = JSON.parse(localStorage.getItem('nominations'));
 
 function App() {
 	// Various visual modes for Results component
 	const EMPTY = 'EMPTY';
 	const SHOW = 'SHOW';
+	const ERROR = 'ERROR';
 	const LOADING = 'LOADING';
 
 	// Search states
@@ -26,7 +27,6 @@ function App() {
 	const [results, setResults] = useState([]);
 
 	// Persist user nominations beyond refresh
-	const session = JSON.parse(localStorage.getItem('nominations'));
 	const [nominations, setNominations] = useState(session || []);
 
 	// Current mode of results
@@ -38,25 +38,33 @@ function App() {
 		isSubmitted: false,
 	});
 
+	const listChanged = () =>
+		JSON.stringify(session) !== JSON.stringify(nominations);
+
 	// Sets term to be passed to api after debounce
 	useEffect(() => {
 		setSearchTerm(term);
 	}, [term, onSearch]);
 
+	useEffect(() => {
+		if (!listChanged()) return;
+
+		if (nominations === undefined || nominations.length === 5) {
+			// Toggle popup if 5 movies are nominated
+			setPopup({ ...popup, isActive: true });
+		}
+	}, [nominations]);
+
 	// Call OMDB api off search
 	useEffect(() => {
 		setMode(LOADING);
-		axios({
-			method: 'GET',
-			url: `https://www.omdbapi.com/?apikey=${API_KEY}`,
-			params: {
-				s: searchTerm,
-				type: 'movie',
-				plot: 'full',
-				r: 'json',
-			},
-		}).then((res) => {
+		Request(searchTerm).then((res) => {
 			setResults(res.data.Search);
+
+			if (res.data.Error === 'Movie not found!') {
+				return setMode(ERROR);
+			}
+
 			res.data.Search === undefined || res.data.Search.length === 0
 				? setMode(EMPTY)
 				: setMode(SHOW);
@@ -66,14 +74,13 @@ function App() {
 	const closePopup = () => setPopup({ isActive: false, isSubmitted: false });
 
 	const handleSubmit = () => {
-		setNominations([]);
 		setInputValue('');
 		setResults([]);
 		setPopup({
 			...popup,
 			isSubmitted: true,
 		});
-		localStorage.clear();
+		session = nominations;
 	};
 
 	return (
@@ -97,6 +104,12 @@ function App() {
 						setPopup={setPopup}
 						nominations={nominations}
 						setNominations={setNominations}
+						handleSubmit={handleSubmit}
+						showSubmit={
+							listChanged() &&
+							!popup.isActive &&
+							nominations.length === 5
+						}
 					/>
 				</div>
 			</main>
@@ -105,6 +118,7 @@ function App() {
 				popup={popup}
 				closePopup={closePopup}
 				handleSubmit={handleSubmit}
+				nominations={nominations}
 			/>
 		</div>
 	);
