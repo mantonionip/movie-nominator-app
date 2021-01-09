@@ -18,6 +18,7 @@ function Results(props) {
 							results={props.results}
 							nominations={props.nominations}
 							setNominations={props.setNominations}
+							setIsSubmitted={props.setIsSubmitted}
 						/>
 					);
 				})
