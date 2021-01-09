@@ -57,14 +57,15 @@
 		margin: 16px 0;
 	}
 
-	&__custom-btn {
+	&__custom-btn,
+	&__clear-btn {
 		border: 1px solid $color-purple !important;
 		border-radius: 5px;
 		background-color: $color-purple !important;
 		color: $color-white !important;
 		cursor: pointer;
 		font-family: $font-body !important;
-		font-size: 0.8rem !important;
+		font-size: 0.6rem !important;
 		font-weight: bold !important;
 		margin: 1rem auto !important;
 		padding: 12px 0;
