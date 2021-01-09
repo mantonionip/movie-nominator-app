@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
+import { set } from '../helpers/storage';
 
 function NominationArticle(props) {
 	const removeNomination = (nominations, movie) => {
@@ -8,6 +9,8 @@ function NominationArticle(props) {
 			(nomination) => nomination.imdbID !== movie.imdbID
 		);
 		props.setNominations(newNominations);
+		set(newNominations);
+		props.setIsSubmitted(false);
 	};
 
 	return (
