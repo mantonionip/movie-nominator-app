@@ -7,9 +7,11 @@ import Nominations from './components/Nominations';
 import Footer from './components/Footer';
 import Banner from './components/Banner';
 import Request from './helpers/Request';
+import { clear, submit } from './helpers/storage';
 import useDebounce from './hooks/useDebounce';
 
-let session = JSON.parse(localStorage.getItem('nominations'));
+let storage = JSON.parse(localStorage.getItem('nominations'));
+let session = storage?.nominations;
 
 function App() {
 	// Various visual modes for Results component
@@ -25,6 +27,7 @@ function App() {
 	const onSearch = useCallback(setSearchTerm, [setSearchTerm]);
 
 	const [results, setResults] = useState([]);
+	const [isSubmitted, setIsSubmitted] = useState(storage?.submitted);
 
 	// Persist user nominations beyond refresh
 	const [nominations, setNominations] = useState(session || []);
@@ -38,22 +41,19 @@ function App() {
 		isSubmitted: false,
 	});
 
-	const listChanged = () =>
-		JSON.stringify(session) !== JSON.stringify(nominations);
-
 	// Sets term to be passed to api after debounce
 	useEffect(() => {
 		setSearchTerm(term);
 	}, [term, onSearch]);
 
 	useEffect(() => {
-		if (!listChanged()) return;
+		if (isSubmitted) return;
 
 		if (nominations === undefined || nominations.length === 5) {
 			// Toggle popup if 5 movies are nominated
-			setPopup({ ...popup, isActive: true });
+			setPopup({ isSubmitted: false, isActive: true });
 		}
-	}, [nominations]);
+	}, [nominations, isSubmitted]);
 
 	// Call OMDB api off search
 	useEffect(() => {
@@ -77,10 +77,11 @@ function App() {
 		setInputValue('');
 		setResults([]);
 		setPopup({
-			...popup,
+			isActive: true,
 			isSubmitted: true,
 		});
 		session = nominations;
+		submit(setIsSubmitted);
 	};
 
 	return (
@@ -98,6 +99,7 @@ function App() {
 						setNominations={setNominations}
 						inputValue={inputValue}
 						mode={mode}
+						setIsSubmitted={setIsSubmitted}
 					/>
 					<Nominations
 						popup={popup}
@@ -105,11 +107,16 @@ function App() {
 						nominations={nominations}
 						setNominations={setNominations}
 						handleSubmit={handleSubmit}
+						clearData={
+							isSubmitted &&
+							(() => clear(setNominations, setIsSubmitted))
+						}
 						showSubmit={
-							listChanged() &&
+							!isSubmitted &&
 							!popup.isActive &&
 							nominations.length === 5
 						}
+						setIsSubmitted={setIsSubmitted}
 					/>
 				</div>
 			</main>
