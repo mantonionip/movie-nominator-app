@@ -58,6 +58,7 @@ function Nominations(props) {
 									movie={movie}
 									nominations={props.nominations}
 									setNominations={props.setNominations}
+									setIsSubmitted={props.setIsSubmitted}
 								/>
 							);
 						})
@@ -69,6 +70,14 @@ function Nominations(props) {
 						onClick={props.handleSubmit}
 					>
 						Submit
+					</button>
+				)}
+				{props.clearData && (
+					<button
+						className="nominations__clear-btn"
+						onClick={props.clearData}
+					>
+						Clear List
 					</button>
 				)}
 			</div>
