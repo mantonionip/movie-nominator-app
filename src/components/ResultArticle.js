@@ -17,9 +17,12 @@ function ResultArticle(props) {
 
 	const saveNomination = () => {
 		props.setNominations((nominations) => [...nominations, props.movie]);
+		props.setIsSubmitted(false);
 		localStorage.setItem(
 			'nominations',
-			JSON.stringify([...props.nominations, props.movie])
+			JSON.stringify({
+				nominations: [...props.nominations, props.movie],
+			})
 		);
 	};
 
@@ -52,9 +55,7 @@ function ResultArticle(props) {
 					onClick={saveNomination}
 					disabled={isMovieNominated(props.nominations, props.movie)}
 				>
-					{isMovieNominated(props.nominations, props.movie)
-						? 'Nominated'
-						: 'Nominate'}
+					Nominate
 				</Button>
 			</div>
 		</li>
