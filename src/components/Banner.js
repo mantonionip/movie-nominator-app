@@ -10,7 +10,7 @@ function Banner(props) {
 				<p>Completed!</p>
 			</div>
 			<p className="popup__article">Thank you for your submission!</p>
-			<div className="popup__buttons">
+			<div className="popup__buttons popup__close-btn">
 				<Button
 					className="popup__custom-btn"
 					onClick={props.closePopup}
@@ -23,15 +23,21 @@ function Banner(props) {
 		<div className="popup">
 			<div className="popup__header">
 				<span className="popup__title">
-					Thank you for nominating your top 5 movies!
+					Your nomination list is complete!
 				</span>
 			</div>
 			<article className="popup__article">
-				<p>Here's the titles you picked:</p>
+				<p>Here are the titles you picked:</p>
 			</article>
 			<div className="popup__nominated-list">
 				{props.nominations.map(({ Title }) => (
-					<p className="popup__nominated-title">✅ {Title}</p>
+					<p className="popup__nominated-title">
+						{' '}
+						<span role="img" aria-label="bullet point">
+							⚫️
+						</span>{' '}
+						{Title}
+					</p>
 				))}
 			</div>
 			<div className="popup__buttons">
