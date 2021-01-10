@@ -1,6 +1,6 @@
 ![](docs/banner.png)
 
-#Welcome to The Shoppies
+# Welcome to The Shoppies
 To visit the deployed version please click [here](https://filminator.netlify.app/)
 
 A film nomination web app for the Shoppies Awards!
