@@ -1,6 +1,6 @@
 ![](docs/banner.png)
 
-# <h1 align="center">Welcome to The Shoppies</h1>
+#Welcome to The Shoppies
 To visit the deployed version please click [here](https://filminator.netlify.app/)
 
 A film nomination web app for the Shoppies Awards!
