@@ -9,8 +9,7 @@ A film nomination web app for the Shoppies Awards allowing users to search for t
 ## 🎟 About The Project
 This project is built and developed for the Shopify's UX & Web Development Intern Challenge - Summer 2021.
 
-## 🎟 The Challenge
-### Statement
+### Challenge Statement
 
 We need a webpage that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
 
