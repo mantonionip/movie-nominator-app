@@ -2,14 +2,14 @@
 ![](docs/animated-banner.gif)
 [Live Demo](https://filminator.netlify.app/)
 
-## Description:
+## 🎟 Description:
 A film nomination web app for the Shoppies Awards allowing users to search for their favourite films, select the top 5 titles, and submit their nomination list.
 
 
-## About The Project
+## 🎟 About The Project
 This project is built and developed for the Shopify's UX & Web Development Intern Challenge - Summer 2021.
 
-## The Challenge
+## 🎟 The Challenge
 ### Statement
 
 We need a webpage that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
@@ -30,7 +30,7 @@ We'd like a simple to use interface that makes it easy to:
 6. Display a banner when the user has 5 nominations.
 
 
-## Functionality 
+## 🎟 Functionality 
 - Search any film title you have in mind and get the right titles on the result list.
 - Add ones you like most to the nomination list.
 - Once the list gets filled with 5 films, a message pops up showing your selected titles.
