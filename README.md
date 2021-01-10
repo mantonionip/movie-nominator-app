@@ -7,7 +7,6 @@ A film nomination web app for the Shoppies Awards allowing users to search for t
 
 
 ## About The Project
-
 This project is built and developed for the Shopify's UX & Web Development Intern Challenge - Summer 2021.
 
 ## The Challenge
@@ -29,3 +28,11 @@ We'd like a simple to use interface that makes it easy to:
 4. Movies in search results can be added and removed from the nomination list.
 5. If a search result has already been nominated, disable its nominate button.
 6. Display a banner when the user has 5 nominations.
+
+
+## Functionality 
+- Search any movie title you have in mind and get the match titles on the result list.
+- Add the ones you have in mind to the nomination list.
+- Once the list is filled with 5 titles, a message including the final result pops up.
+- Either submit the list or edit it in case you've changed your mind.
+- You can come back to your submitted list whenever you want unless you delete the list and start over.
