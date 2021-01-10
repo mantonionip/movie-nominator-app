@@ -1,4 +1,4 @@
-# <h1 align="center">Welcome to The Shoppies</h1>
+# Welcome to The Shoppies
 ![](docs/banner.png)
 [Live Demo](https://filminator.netlify.app/)
 
