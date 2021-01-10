@@ -31,8 +31,8 @@ We'd like a simple to use interface that makes it easy to:
 
 
 ## Functionality 
-- Search any movie title you have in mind and get the match titles on the result list.
-- Add the ones you have in mind to the nomination list.
-- Once the list is filled with 5 titles, a message including the final result pops up.
+- Search any film title you have in mind and get the right titles on the result list.
+- Add ones you like most to the nomination list.
+- Once the list gets filled with 5 films, a message pops up showing your selected titles.
 - Either submit the list or edit it in case you've changed your mind.
 - You can come back to your submitted list whenever you want unless you delete the list and start over.
