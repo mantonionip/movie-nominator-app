@@ -93,11 +93,14 @@
 		padding-bottom: 0;
 	}
 
+	&__img-container {
+		width: 48%;
+	}
+
 	&__poster {
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		border-radius: 0.15rem;
 		padding: 10px;
-		margin-right: 10px;
 		width: 5rem;
 	}
 
@@ -105,6 +108,7 @@
 		display: flex;
 		flex-direction: column;
 		align-self: center;
+		width: 51%;
 	}
 
 	&__description {
