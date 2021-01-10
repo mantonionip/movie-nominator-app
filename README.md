@@ -1,5 +1,5 @@
 # Welcome to The Shoppies
-![](docs/banner.png)
+![](docs/animated-banner.gif)
 [Live Demo](https://filminator.netlify.app/)
 
 ## Description:
