@@ -28,14 +28,16 @@ function ResultArticle(props) {
 
 	return (
 		<li className="article__container">
-			<img
-				src={props.movie.Poster}
-				alt={`${props.movie.Title} poster`}
-				className="article__poster"
-				onError={(event) =>
-					(event.target.src = 'images/no_image_found.jpg')
-				}
-			/>
+			<div className="article__img-container">
+				<img
+					src={props.movie.Poster}
+					alt={`${props.movie.Title} poster`}
+					className="article__poster"
+					onError={(event) =>
+						(event.target.src = 'images/no_image_found.jpg')
+					}
+				/>
+			</div>
 			<div className="article__desc-flex">
 				<div className="article__description">
 					<span className="article__title">

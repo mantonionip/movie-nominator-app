@@ -15,14 +15,16 @@ function NominationArticle(props) {
 
 	return (
 		<li className="nomination__container">
-			<img
-				src={props.movie.Poster}
-				alt={`${props.movie.Title} poster`}
-				className="nomination__poster"
-				onError={(event) =>
-					(event.target.src = 'images/no_image_found.jpg')
-				}
-			/>
+			<div className="nomination__img-container">
+				<img
+					src={props.movie.Poster}
+					alt={`${props.movie.Title} poster`}
+					className="nomination__poster"
+					onError={(event) =>
+						(event.target.src = 'images/no_image_found.jpg')
+					}
+				/>
+			</div>
 			<div className="nomination__desc-flex">
 				<div className="nomination__description">
 					<span className="nomination__title">
