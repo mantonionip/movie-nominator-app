@@ -1,10 +1,9 @@
+# <h1 align="center">Welcome to The Shoppies</h1>
 ![](docs/banner.png)
-
-# Welcome to The Shoppies
 [Live Demo](https://filminator.netlify.app/)
 
 ## Description:
-A film nomination web app for the Shoppies Awards; search for your favourite titles, select the top 5, and submit your nomination list.
+A film nomination web app for the Shoppies Awards allowing to search for your favourite films, select the top 5 title, and submit your nomination list.
 
 
 ## About The Project
