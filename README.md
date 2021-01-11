@@ -6,10 +6,10 @@
 A film nomination web app for the Shoppies Awards allowing users to search for their favourite films, select the top 5 titles, and submit their nomination list.
 
 
-## 🎟 About The Project
+## 🎟 About The Project:
 This project is built and developed for the Shopify's UX & Web Development Intern Challenge - Summer 2021.
 
-### Challenge Statement
+### Challenge Statement:
 
 We need a webpage that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
 
@@ -19,7 +19,7 @@ We'd like a simple to use interface that makes it easy to:
 - View the list of films already nominated 
 - Remove a nominee from the nomination list
 
-### Technical requirements
+### Technical requirements:
 
 1. Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx).
 2. Each search result should list at least its title, year of release and a button to nominate that film.
@@ -29,7 +29,7 @@ We'd like a simple to use interface that makes it easy to:
 6. Display a banner when the user has 5 nominations.
 
 
-## 🎟 Functionality 
+## 🎟 Functionality:
 - Search any film title you have in mind and get the right titles on the result list.
 - Add ones you like most to the nomination list.
 - Once the list gets filled with 5 films, a message pops up showing your selected titles.
