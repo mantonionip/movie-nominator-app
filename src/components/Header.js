@@ -12,10 +12,10 @@ function Header(props) {
 					alt="Animated film reel."
 				/>
 				<h1 className="app__heading">
-					<span className="app__heading-title">The Shoppies</span>
+					<span className="app__heading-title">Viva Cinema</span>
 					<span className="app__heading-span">
 						{' '}
-						Movie awards for entrepreneurs
+						Movie awards for movie lovers
 					</span>
 				</h1>
 				<img
