@@ -7,7 +7,6 @@ A film nomination web app for movie lovers allowing them to search for their fav
 
 
 ## 🎟 About The Project:
-This project is built and developed for the Shopify's UX & Web Development Intern Challenge - Summer 2021.
 
 ### Challenge Statement:
 
